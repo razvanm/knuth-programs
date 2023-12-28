@@ -194,7 +194,7 @@ programs/sudoku-dlx.w
 programs/sudoku-general-dlx.w
 programs/dlx1-sudoku.ch
 programs/fillomino-dlx.w
-programs/ian-dlx.w
+programs/de-bruijn-dlx.w
 programs/ian-dlx.w
 programs/macmahon-triangles-dlx.w
 programs/masyu-dlx.w
