@@ -1,8 +1,10 @@
 FILES := $(shell cat programs.txt)
 WEB_FILES := $(wildcard programs/*.w)
 WEB_FILES_BASE := $(basename $(WEB_FILES))
-TEX_FILES := $(addsuffix .tex,$(WEB_FILES_BASE))
-C_FILES := $(addsuffix .c,$(WEB_FILES_BASE))
+CH_FILES := $(wildcard programs/*.ch)
+CH_FILES_BASE := $(basename $(CH_FILES))
+TEX_FILES := $(addsuffix .tex,$(WEB_FILES_BASE) $(CH_FILES_BASE))
+C_FILES := $(addsuffix .c,$(WEB_FILES_BASE) $(CH_FILES_BASE))
 
 all: programs.html programs.txt $(TEX_FILES) $(C_FILES)
 update: $(FILES)
@@ -20,8 +22,23 @@ $(FILES):
 %.tex: %.w
 	cweave $< - $@
 
+%.c: %.w
+	ctangle $< - $@
+
+%.tex: %.ch
+	cweave $(filter %.w,$^) $(filter %.ch,$^) $@
+
+%.c: %.ch
+	ctangle $(filter %.w,$^) $(filter %.ch,$^) $@
+
 %.pdf: %.tex
 	pdftex -output-directory=$(dir $@) $<
 
-%.c: %.w
-	ctangle $< - $@
+deps:
+	for i in $(WEB_FILES); do for j in $$(echo $(filter-out krom-count.ch,CH_FILES) | fmt -1 | grep $$(echo $$i | cut -d '.' -f 1)); do echo $${j%.ch}.tex $${j%.ch}.c: $$i $$j; done; done > Makefile.deps
+
+# This is a special case that doesn't follow the pattern of having a .w that
+# is a prefix of the .ch file.
+programs/krom-count.tex programs/krom-count.c: programs/horn-count.w programs/krom-count.ch
+
+-include Makefile.deps
