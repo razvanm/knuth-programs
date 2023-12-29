@@ -1,0 +1,196 @@
+<!DOCTYPE HTML PUBLIC "-//Netscape Comm. Corp.//DTD HTML//EN">
+<html>
+<head>
+<title>
+Knuth: Programs
+</title>
+<!-- Changed by: Ursula N. Owen, 16-May-1999 -->
+</head>
+<body bgcolor="#F8F4E7" text="#552800"
+      link="#0000A0" vlink="#A000A0" alink="#00A000">
+<h2>
+<img src="donsmall.gif">
+Programs to Read
+</h2>
+<p>
+I write lots of
+<a href="cweb.html"><tt>CWEB</tt></a> programs, primarily for my own
+edification. If there is sufficient interest, I'll make a large subset
+of them available via the Internet. For now, I'm listing only a few.
+The first two show (by quite different methods) that exactly 2,432,932
+knight's tours are unchanged by 180-degree rotation of the chessboard.
+The third was used to compute some of the tables in
+<a href="aah.html">Axioms and Hulls</a>
+that several people have asked about.
+The fourth was used in one of my otherwise unpublished lectures in the
+<a href="musings.html">Computer Musings</a> series. The next few were
+requested by members of the Academy of Recreational Mathmaticians
+in Japan. And so on.
+</p>
+<p>
+Note: Many of my programs, including the first two samples, use
+the conventions and library of
+<a href="sgb.html">The Stanford GraphBase</a>.
+</p>
+<dl>
+<dt><a href="programs/sham.w">SHAM</a></dt>
+<dd>Enumerates symmetrical Hamiltonian cycles (December 1992)</dd>
+<dt><a href="programs/setset.w">SETSET</a></dt>
+<dd>Enumerates nonisomorphic unplayable hands in the game of SET&#174; (February 2001)</dd>
+<dt><a href="programs/setset-all.w">SETSET-ALL</a></dt>
+<dd>Improvement of SETSET---fifty times faster---when a huge automorphism group is considered (March 2001)</dd>
+<dt><a href="programs/setset-random.w">SETSET-RANDOM</a></dt>
+<dd>Simple Monte Carlo routine to validate the previous two programs (March 2001)</dd>
+<dt><a href="programs/sliding.w">SLIDING</a></dt>
+<dd>Finds solutions to sliding block puzzles (November 2001)</dd>
+<dt><a href="programs/obdd.w.gz">OBDD</a></dt>
+<dd>Enumerates perfect matchings of bipartite graphs (May 1996)</dd>
+<dt><a href="programs/reflect.w.gz">REFLECT</a>; also a
+<a href="programs/reflect.ch.gz">change file for REFLECT</a></dt>
+<dd>Enumerates equivalence classes of reflection networks, aka CC systems
+(January 1991)</dd>
+<dt><a href="programs/hull.w">HULL</a>,
+<a href="programs/hulls.w">HULLS</a>,
+<a href="programs/hullt.w">HULLT</a>,
+<a href="programs/hulltr.w">HULLTR</a></dt>
+<dd>Programs used as examples in
+<a href="aah.html"><cite>Axioms and Hulls</cite></a>; also change files for
+<a href="programs/hulld-ngon.ch">ngons</a>,
+<a href="programs/hulld-square.ch">square deletion</a>, and
+<a href="programs/hulld-unif.ch">uniform input distribution</a></dd>
+<dt><a href="programs/tcalc.w.gz">TCALC</a></dt>
+<dd>Interactively calculates with humungous numbers (December 1994)</dd>
+<dt><a href="programs/decagon.w.gz">DECAGON</a>; also a
+<a href="programs/decagon-star.ch.gz">change file for DECAGON (stars)</a>;
+also a
+<a href="programs/decagon-color.ch.gz">change file for DECAGON (color)</a>;
+also a
+<a href="programs/decagon-colorstar.ch.gz">change file for DECAGON (color
+stars)</a></dt>
+<dd>Packs golden triangles into decagons, stars, pentagons, etc.
+(September 1994)</dd>
+<dt><a href="programs/antislide.w.gz">ANTISLIDE</a>; also a
+<a href="programs/antislide-nocorner.ch.gz">change file for ANTISLIDE</a></dt>
+<dd>Finds solutions to Strijbos's antisliding block puzzle (November 1994)</dd>
+<dt><a href="programs/antislide3.w.gz">ANTISLIDE3</a></dt>
+<dd>Improved version of ANTISLIDE, finds all nonisomorphic solutions (December 1996)</dd>
+<dt><a href="programs/fog2mf.w">FOG2MF</a></dt>
+<dd>Rudimentary conversion from Fontographer to METAFONT (August 1996)</dd>
+<dt><a href="programs/lagfib.w">LAGFIB</a></dt>
+<dd>Calculator of weights related to the random number generator below (July 1997)</dd>
+<dt><a href="programs/garsia-wachs.w">GARSIA-WACHS</a></dt>
+<dd>Simple implementation of Algorithm 6.2.2G (January 1998)</dd>
+<dt><a href="programs/halftone.w">HALFTONE</a></dt>
+<dd>Preprocessor for typeset halftones; also example input files
+<a href="programs/lisa-64">lisa-64</a>,
+<a href="programs/lisa-rot">lisa-rot</a>,
+<a href="programs/lisa-128">lisa-128</a>,
+<a href="programs/lin-64">lin-64</a>,
+<a href="programs/lin-rot">lin-rot</a>,
+<a href="programs/lin-128">lin-128</a>,
+<a href="programs/lib-64">lib-64</a>,
+<a href="programs/lib-rot">lib-rot</a>,
+<a href="programs/lib-128">lib-128</a> (June 1998)</dd>
+<dt><a href="programs/dot-diff.w">DOT-DIFF</a></dt>
+<dd>Preprocessor for halftones by dot diffusion; also an example input file
+<a href="programs/lisa-512">lisa-512</a>, 
+and a <a href="programs/dot-diff-eps.ch">change file for EPS output</a>
+(June 1998)</dd>
+<dt><a href="programs/togpap.w">TOGPAP</a></dt>
+<dd>Generates examples of halftones for paper P116 on dot diffusion (June 1998)</dd>
+<dt><a name="dancing"></a><a href="programs/dance.w">DANCE</a>,
+<a href="programs/polyominoes.w">POLYOMINOES</a>,
+<a href="programs/polyiamonds.w">POLYIAMONDS</a>,
+<a href="programs/polysticks.w">POLYSTICKS</a>,
+<a href="programs/queens.w">QUEENS</a></dt>
+<dd>Generates examples for paper P159 on dancing links (July 1999); also a
+<a href="programs/dance-random.ch">change file for Monte Carlo estimates</a></dd>
+<dt><a href="programs/gdance.w">GDANCE</a>,
+<a href="programs/xgdance.w">XGDANCE</a>,
+<a href="programs/gdance-cutoff.ch">GDANCE-CUTOFF</a></dt>
+<dd>Experimental extensions of the Dancing Links algorithm (November 2000)</dd>
+<dt><a href="programs/hamdance.w">HAMDANCE</a></dt>
+<dd>A dancing-link-based program for Hamiltonian circuits (May 2001),
+which you might
+want to compare to the more traditional algorithm of
+<a href="programs/ham.w">HAM</a></dd>
+<dt><a name="polyominoes"></a><a href="programs/polynum.w">POLYNUM</a>,
+<a href="programs/polyslave.w">POLYSLAVE</a>, and their change files
+<a href="programs/polynum-restart.ch">POLYNUM-RESTART</a> and
+<a href="programs/polyslave-restart.ch">POLYSLAVE-RESTART</a> for long runs</dt>
+<dd>Enumerates polyominoes with Iwan Jensen's algorithm, thousands of times
+faster than previous approaches (but is a memory hog); also
+<a href="programs/jensen.txt">notes from Jensen</a> about potential further
+improvements and the probable value of t(48); also a MetaPost source
+file <a href="programs/polyomino.mp">polyomino.mp</a> to make an illustration
+for the documentation of both POLYNUM and a now-obsolete program
+<a href="programs/polyenum.w">POLYENUM<a></dd>
+<dt><a href="programs/advent.w.gz">ADVENT</a></dt>
+<dd>The original Crowther/Woods Adventure game, Version 1.0, translated into CWEB form; I offer $2.56 to the first finder of any error in this beta-test version (improved version of 2 January 2001)</dd>
+<dt><a href="programs/rost.w">ROST</a></dt>
+<dd>Monte Carlo confirmation of exercise 5.1.4--40 (October 1998)</dd>
+<dt><a href="programs/ran-prim.w">RAN-PRIM</a></dt>
+<dd>Monte Carlo exploration of exercise 5.3.4--40 (October 1998)</dd>
+<dt><a href="programs/strongchain.w">STRONGCHAIN</a></dt>
+<dd>finds shortest strong addition chains, also called Lucas chains or
+Chebyshev chains (August 2000)</dd>
+<dt><a name="Gray"></a><a href="programs/koda-ruskey.w">KODA-RUSKEY</a></dt>
+<dd>A fascinating generalized reflected Gray-code generator (new version, June 2001)</dd>
+<dt><a href="programs/li-ruskey.w">LI-RUSKEY</a></dt>
+<dd>An even more fascinating, massive generalization of the previous
+program (June 2001); also a PostScript illustration
+<a href="programs/li-ruskey.1"><tt>li-ruskey.1</tt></a> made by the
+MetaPost source file <a href="programs/li-ruskey.mp"><tt>li-ruskey.mp</tt></a>
+</dd>
+<dt><a href="programs/topswops.w">TOPSWOPS</a> and
+<a href="programs/topswops-fwd.w">TOPSWOPS-FWD</a></dt>
+<dd>Two ways to find the longest plays of John Conway's "topswops" game
+(August 2001)</dd>
+</dl>
+<p></p>
+<img src="border.gif">
+<p>
+Programs in languages other than CWEB:
+</p>
+<dl>
+<dt>RANARRAY</dt>
+<dd>Portable random number generator recommended in Seminumerical Algorithms,
+ 3rd edition (last updated October 1998)</dd>
+</dl>
+<blockquote><ul>
+<li><a href="programs/rng.c">C version, int</a></li>
+<li><a href="programs/rng-double.c">C version, double</a></li>
+<li><a href="programs/frng.f">FORTRAN version, INTEGER</a></li>
+<li><a href="programs/frngdb.f">FORTRAN version, DOUBLE PRECISION</a></li>
+</ul></blockquote>
+<dl>
+<dt><a href="programs/sgbfig.mp.gz">SGBFIG</a></dt>
+<dd><a href="http://cm.bell-labs.com/who/hobby/MetaPost.html">MetaPost</a>
+sources for the illustrations in
+<a href="sgb.html">The Stanford GraphBase</a> (1994)</dd>
+<dt><a href="programs/color-mode.el">color-mode.el</a></dt>
+<dd>An experimental line-oriented color mode for Emacs (August 2000)</dd>
+<dt><a href="programs/.fvwm2rc">Sample Fvwm2 Config File</a>
+<dd>The emacs-oriented desktop layouts I use on my home computer to write
+books;
+<a href="screen.jpeg"><img src="screen.gif"></a> these also need icons
+<a href="zero.xpm">zero.xpm</a>,
+<a href="one.xpm">one.xpm</a>,
+<a href="two.xpm">two.xpm</a>,
+<a href="three.xpm">three.xpm</a> (May 2000)</dd>
+</dl>
+<img src="border.gif">
+<h3>
+<a href="index.html">
+<img src="dontiny.gif" align="absmiddle" border=0
+ hspace=10>Don Knuth's home page</a>
+</h3>
+<a href="http://validator.w3.org/">
+<img src="checked.gif" alt="(Netscape-HTML checked)" align="right"></a>
+<img src="/cgi-bin/count.cgi?df=knuth-programs.dat|sh=0" align=absmiddle>
+</body>
+</html>
+
+
+
+
